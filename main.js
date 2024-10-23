@@ -23,9 +23,10 @@ function somar() {
     let quartoResultado = Math.ceil(quartoLugarValue * 1.9);
     let quintoResultado = Math.ceil(quintoLugarValue * 1.9);
 
-    // Soma total dos resultados
-    let resultadoTotal = totalPfValue - primeiroResultado + segundoResultado + terceiroResultado + quartoResultado + quintoResultado;
-
+    // Soma das posições
+    let resultadoPosicao = primeiroResultado + segundoResultado + terceiroResultado + quartoResultado + quintoResultado;
+    //Soma total
+    let resultadoTotal = totalPfValue - resultadoPosicao;
     // Chama a função para mostrar os resultados individuais
     mostrarColocacao(primeiroResultado, segundoResultado, terceiroResultado, quartoResultado, quintoResultado, resultadoTotal);
 }
