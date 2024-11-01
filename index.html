@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" type="image/png">
     <title>Calculadora de GE</title>
 </head>
@@ -15,25 +16,26 @@
 <body>
     <main class="camp">
         <div class="total">
-            <h1>total de pontos forge:</h1>
-            <input type="number" id="total-pf" name="quantidade" min="" max="" placeholder="0">
+            <h1>Selecione um Grande Edifício:</h1>
+            <select id="buildingSelect" class="ge-list"></select>
+            <h2>Selecione o Nível desejado:</h2>
+            <label for="buildingLevel"></label>
+            <input type="number" id="buildingLevel" placeholder="Digite o nível" min="1">
         </div>
-        <div class="colocacoes">
-            <h2>1 lugar</h2>
-            <input type="number" id="first-place" name="quantidade" min="" max="" placeholder="0">
-            <h2>2 lugar</h2>
-            <input type="number" id="second-place" name="quantidade" min="" max="" placeholder="0">
-            <h2>3 lugar</h2>
-            <input type="number" id="third-place" name="quantidade" min="" max="" placeholder="0">
-            <h2>4 lugar</h2>
-            <input type="number" id="fourth-place" name="quantidade" min="" max="" placeholder="0">
-            <h2>5 lugar</h2>
-            <input type="number" id="fifth-place" name="quantidade" min="" max="" placeholder="0">
+        <div class="actions">
+            <button type="button" id="fetchDetails" class="btn">Calcular</button>
         </div>
-            <button type="button" id="bt">Calcular</button>
-    
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Resultados</h2>
+                <div id="modal-body"></div>
+                <button id="copiarPosicoesButton" class="btn">Copiar Posições</button>
+            </div>
+        </div>
     </main>
-    <script src="main.js" defer></script>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
